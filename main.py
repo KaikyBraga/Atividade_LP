@@ -45,12 +45,22 @@ class Product:
         Returns:
             dict: Um dicionário com informações do produto, incluindo nome, código de barras, preço, empresa e categoria.
         """
-        return {"Product Name": self.name_product, 
-                "Barcode": self.barcode, 
-                "Price": self.price, 
-                "Company ID": Company(self.id_company).value,
-                "Company Name": Company(self.id_company).name,
-                "Category": self.category}
+        info = {
+            "Product Name": self.name_product, 
+            "Barcode": self.barcode, 
+            "Price": self.price, 
+            "Company ID": Company(self.id_company).value,
+            "Company Name": Company(self.id_company).name,
+            "Category": self.category
+            }
+        
+        table = f"Product Name: {info['Product Name']}\n"
+        table += f"Barcode: {info['Barcode']}\n"
+        table += f"Price: {info['Price']}\n"
+        table += f"Company ID: {info['Company ID']}\n"
+        table += f"Company Name: {info['Company Name']}\n"
+        table += f"Category: {info['Category']}\n"
+        return table
     
     def update_name(self, _name_product):
         """
@@ -215,7 +225,7 @@ class Invetory():
         quantidade em estoque, empresa e categoria. Cada produto é listado com a quantidade disponível.
         """
         for prod in self.products_list:
-            print(prod[0].get_info_product(), prod[1])
+            print(f"{prod[0].get_info_product()}Quantidade: {prod[1]}\n")
 
     def rmv_product(self, product, qnt: int):
         """
