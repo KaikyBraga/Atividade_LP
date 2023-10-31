@@ -1,4 +1,4 @@
-from atividade import *
+from main import *
 
 # Instâncias da classe FoodProduct
 guarana_lata = FoodProduct("Guarana Lata", "3128939120381", 3.70, 6, "Refrigerante", "24-12-05")
