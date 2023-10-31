@@ -12,6 +12,8 @@ class Company(Enum):
     MICROSOFT = 4
     SAMSUNG = 5
     GUARANA = 6
+    NIKE = 7
+    ADIDAS = 8
 
 class Product:
     """
