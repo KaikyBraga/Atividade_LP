@@ -36,5 +36,5 @@ estoque.rmv_product(coca_lata, 50)
 estoque.rmv_product(coca_lata, 130)
 estoque.rmv_product(coca_lata, 50)
 
-# Informações dos produtos
+# Amostragem do Inventário
 estoque.show_invetory()
